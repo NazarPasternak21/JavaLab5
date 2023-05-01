@@ -9,7 +9,7 @@ public class MainTest {
 
     @Test
     public void testFindWords() {
-        String text = "The quick brown fox jumps over the lazy dog";
+        String text = "This is a test sentence.";
         int digit = 5;
         List<String> expectedWords = Arrays.asList();
         List<String> actualWords = WordFinder.findWords(text, digit);
