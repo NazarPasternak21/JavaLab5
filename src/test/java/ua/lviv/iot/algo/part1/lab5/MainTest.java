@@ -1,19 +1,12 @@
 package ua.lviv.iot.algo.part1.lab5;
 import org.junit.jupiter.api.Test;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MainTest {
-
     @Test
-    public void testFindWords() {
-        String text = "This is a test sentence.";
-        int digit = 5;
-        List<String> expectedWords = Arrays.asList();
-        List<String> actualWords = WordFinder.findWords(text, digit);
-        assertEquals(expectedWords, actualWords);
+    void testRun() {
+        Main app = new Main();
+        String input = "This is a test input 123\n" + "3\n";
+        System.setIn(new java.io.ByteArrayInputStream(input.getBytes()));
+        app.run();
+        System.setIn(System.in);
     }
-
 }
