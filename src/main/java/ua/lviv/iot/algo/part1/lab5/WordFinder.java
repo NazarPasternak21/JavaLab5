@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class WordFinder {
 
-    public static List<String> findWords(final String text, final int digit) {
+    public List<String> findWords(final String text, final int digit) {
         List<String> result = new ArrayList<>();
         Pattern pattern = Pattern.compile("\\b\\w" + digit + "\\w*\\b");
         Matcher matcher = pattern.matcher(text);
